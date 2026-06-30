@@ -6,9 +6,8 @@ from supabase import create_client, Client
 # ========================================================
 # Suas credenciais oficiais do projeto "Portal_Rocagem"
 
-SUPABASE_URL = "https://jgtefwcottsxcxonjysa.supabase.co"
-
-SUPABASE_KEY = "sb_publishable_7-jb9Ccb3vlL6uIS2hUkMw_yMdnkfMR"
+SUPABASE_URL = st.secrets["SUPABASE_URL"]
+SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 
 # Inicializa o cliente do banco de dados na nuvem
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
