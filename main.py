@@ -1,6 +1,17 @@
 import streamlit as st
 from supabase import create_client, Client
 
+# Código para esconder os menus e logos do Streamlit
+esconder_menu = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(esconder_menu, unsafe_allow_html=True)
+
+
 # ========================================================
 # CONEXÃO COM O BANCO DE DADOS (SUPABASE)
 # ========================================================
